@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+    background-color: #7FFFD4;
+}
+
+h2 {
+    color: #008000;
+    margin-bottom: 20px;
+}
+
+ul#listaDirecciones {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #ffffff; 
+    border: 1px solid #dddddd; 
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+div {
+    margin-bottom: 10px;
+}
+
+
+div.nombre {
+    font-weight: bold;
+    color: #008000; 
+}
+
+div.apellidos {
+    color: #333333;
+}
+
+div.direccion, div.ciudad {
+    font-style: italic;
+}
+
+div.codigoPostal, div.telefono {
+    font-weight: bold;
+    color: #333333; 
+}

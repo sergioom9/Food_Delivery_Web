@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEEGREEN</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>BEEGREEN</h1>
+<h3 class="titulo">Restaurantes con los que trabajamos</h3>
+<ul class="lista">
+    <li class="Mc">
+     <h4 >McDonalds</h4>
+     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/McDonald%27s_logo.svg/220px-McDonald%27s_logo.svg.png"></img>
+    </li>
+    <li class="Tele">
+        <h4>Telepizza</h4>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3C8fqyibMQOipL_OuoEvzL_-iw3JS4xwO6O9NPZLbrw&s"></img>
+    </li>
+    <li class="Burger">
+        <h4>Burger</h4>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdyW4BoxYADKBtPoaTqgd2CZOeIJ0D8ZhdRrGs_v0U-Q&s"></img>
+    </li>
+    <li class="Taco">
+        <h4>TacoBell</h4>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdPTWKi-Zgo0mKY83j58fc2DCrHOlVmCCZSgwwGkmoZA&s"></img>
+    </li>
+    <li class="popeyes">
+        <h4>Popeyes</h4>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMhVa6wrdh-IUPnuD57jZFJN2kCiUu26vYGAP2Uuzz7A&s"></img>
+    </li>
+    <li class="kfc">
+        <h4>KFC</h4>
+        <img src="https://media.printables.com/media/prints/371418/images/3127865_d62c0f1a-87e9-4d80-bf35-aaf07bbd5acd/thumbs/inside/1280x960/jpg/kfc_logo.webp"></img>
+    </li>
+    <li class="ribs">
+        <h4>RIBS</h4>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpBc17u1-uhoNvmbkvBtHbBl7uIqxls2vraGyQF6JJyQ&s"></img>
+    </li>
+    <li class="foster">
+        <h4>Foster Holywood</h4>
+        <img src="https://th.bing.com/th/id/OIP.XEFA8pz66L_zsDShr33aAwHaFY?rs=1&pid=ImgDetMain"></img>
+    </li>
+    <li class="vips">
+        <h4>Vips</h4>
+        <img src="https://marcaporhombro.com/wp-content/uploads/2018/02/logo-vips.jpg"></img>
+    </li>
+</ul>
+
+<h2 class="direccion">Añade tu direccion</h2>
+<form class="formulario" id="formulario">
+    <label for="cp">Nombre: </label>
+    <input type="text" id="nombre" name="nombre"  placeholder="Nombre" onclick="clearinput(this)" >
+
+    <label for="cp">Apellidos:</label>
+    <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" onclick="clearinput(this)">
+
+    <label for="cp">Direcciones:</label>
+    <input type="text" id="direccion" name="direccion" placeholder="Direccion" onclick="clearinput(this)">
+
+    <label for="cp">Código Postal:</label>
+    <input type="number" id="cp" name="cp" placeholder="Codigo Postal" onclick="clearinput(this)">
+
+    <label for="cp">Ciudad: </label>
+    <select id="ciudad" name="ciudad">
+        <option value="" disabled selected>Selecciona una ciudad</option>
+    </select>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        rellenarCiudades('ciudad', ciudades);
+    });</script>
+
+    <label for="cp">Telefono:</label>
+    <input type="number" id="telf" name="telf" placeholder="Telefono" onclick="clearinput(this)">
+    <hr>
+    <input type="submit" value="Guardar" onclick="guardar()">
+</form>
+<button class="direccguardadas" id="direccguardadas" onclick="navegar()">Direcciones guardadas</button>
+
+
+<script src="funciones.js"></script>
+</body>
+</html>

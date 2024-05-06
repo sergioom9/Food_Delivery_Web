@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Direcciones Guardadas</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <h2>Direcciones Guardadas</h2>
+    <ul id="listaDirecciones"></ul>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const listaDirecciones = document.getElementById('listaDirecciones');
+            const direccionesGuardadas = JSON.parse(localStorage.getItem('direcciones')) || [];
+
+            direccionesGuardadas.forEach(function(direccion) {
+                const item = document.createElement('li');
+                
+                const nombre = document.createElement('div');
+                nombre.textContent = `Nombre: ${direccion.nombre}`;
+
+                const apellidos = document.createElement('div');
+                apellidos.textContent = `Apellidos: ${direccion.apellidos}`;
+
+                const direccionTexto = document.createElement('div');
+                direccionTexto.textContent = `Dirección: ${direccion.direccion}`;
+
+                const codigoPostal = document.createElement('div');
+                codigoPostal.textContent = `Código Postal: ${direccion.codigopostal}`;
+
+                const ciudad = document.createElement('div');
+                ciudad.textContent = `Ciudad: ${direccion.ciudad}`;
+
+                const telefono = document.createElement('div');
+                telefono.textContent = `Teléfono: ${direccion.telefono}`;
+
+                item.appendChild(nombre);
+                item.appendChild(apellidos);
+                item.appendChild(direccionTexto);
+                item.appendChild(codigoPostal);
+                item.appendChild(ciudad);
+                item.appendChild(telefono);
+
+                listaDirecciones.appendChild(item);
+            });
+        });
+    </script>
+</body>
+</html>
